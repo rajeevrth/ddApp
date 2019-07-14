@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie&display=swap");
+
+.cursiveFont {
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+}
+.headerText {
+  top: 20%;
+}
