@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./header.css";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -12,15 +13,15 @@ class Header extends Component {
         },
         {
           name: "About",
-          routeLink: "/"
+          routeLink: "/about"
         },
         {
           name: "Contact",
-          routeLink: "/"
+          routeLink: "/contact"
         },
         {
           name: "DOTD",
-          routeLink: "/"
+          routeLink: "/dotd"
         }
       ]
     };
@@ -36,10 +37,11 @@ class Header extends Component {
             {this.state.links.map(link => (
               <li
                 value={link.name}
-                className="dtc cursiveFont pointer grow dib  no-underline black-90 "
-                onClick={() => this.navigateToLink(link.routeLink)}
+                className="dtc cursiveFont pointer grow dib  no-underline black-90"
               >
-                {link.name}
+                <NavLink exact to={link.routeLink} activeClassName="green">
+                  {link.name}
+                </NavLink>
               </li>
             ))}
           </ul>
